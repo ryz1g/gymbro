@@ -4,7 +4,7 @@ class ExcerciseCard extends React.Component {
     render() {
         return (
             <div className="card">
-                <h1>Bench Press</h1>
+                <h1>{this.props.name}</h1>
             </div>
         );
     }
