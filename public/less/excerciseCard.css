@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  color: white;
+}
+.card {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+  border-color: #01080D;
+  background-color: #594A3C;
+}
+.card h1 {
+  padding: 10px 10px;
+  position: absolute;
+  bottom: 0px;
+}

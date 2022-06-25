@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+}
+.card {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+  border-color: #01080D;
+  background-color: #01080D;
+  color: #ad2e2e;
+}
+.card h1 {
+  padding: 10px 10px;
+  position: absolute;
+  bottom: 0px;
+}
+.searchBar input[type="text"] {
+  width: 500px;
+  height: 100px;
+  color: #ad2e2e;
+}
