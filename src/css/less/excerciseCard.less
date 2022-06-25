@@ -1,19 +1,49 @@
-* {
-    margin: 0px;
-}
+.cardCover {
+    position: relative;
+    // padding: 5px;
+    width:370px;
+    height:210px;
+    .card {
+        position: absolute;
+        width:350px;
+        height:200px;
+        border-radius: 20px;
+        top: 5px;
+        left: 10px;
+        // border-color: @cardBase;
+        // border-width: 5px 5px 5px 5px;
+        // padding: 5px 10px 5px 10px;
+        background-color: @cardBase;
+        color : white;
 
-.card {
-    position:relative;
-    width:350px;
-    height:200px;
-    border-radius: 20px;
-    border-color: @cardBase;
-    // border-width: 5px 5px 5px 5px;
-    background-color: @cardBase;
-    color : @fontColor;
-    h1 {
-        padding: 10px 10px;
-        position:absolute;
-        bottom:0px;
+        p {
+            padding: 10px 10px;
+            position:absolute;
+            bottom:0px;
+            font-size:2em;
+        }
+    
+        &:hover {
+            cursor: pointer;
+            animation-name: anime;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
+            font-size: 0.6em;
+
+            // padding: 15px 15px;
+            p {
+                text-align: justify;
+                padding: 15px 15px;
+            }
+            // width:370px;
+            // height:210px;
+            // top: 0px;
+            // left: 0px;
+            // background-color: @accents;
+        }
+
+        @keyframes anime {
+            to {width:370px;height:210px;top: 0px;left: 0px;background-color: @accents;}
+        }
     }
 }
