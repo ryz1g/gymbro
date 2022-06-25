@@ -1,7 +1,8 @@
 import React from "react";
 import ExcerciseCard from './components/excerciseCard';
-import SearchBar from './components/searchBar';
+import NavBar from './components/navbar';
 import exercise from './data/excerciseData';
+import AddData from './components/addData'
 
 class App extends React.Component{
   constructor() {
@@ -12,8 +13,8 @@ class App extends React.Component{
     };
     this.search = this._search.bind(this);
   }
+
   _search(keyword) {
-    // console.log(keyword);
     if(keyword==="") {
       this.setState({
         visibleExercises:this.exercises
@@ -29,13 +30,16 @@ class App extends React.Component{
       })
     }
   }
+
   render() {
     return (
       <div className="App">
-          <SearchBar search={this.search}/>
+          <NavBar search={this.search}/>
           <div className="displayArea">
-            {this.state.visibleExercises.map(f => f.show ? <ExcerciseCard key={f.id} name={f.name} /> : null)};
+            {this.state.visibleExercises.map(f => f.show ? <ExcerciseCard key={f.id} name={f.name} info={f.info}/> : null)};
           </div>
+          <hr />
+          <AddData currentData={this.exercises} />
       </div>
     );
   }

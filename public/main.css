@@ -1,43 +1,124 @@
-* {
-  margin: 0px;
-}
-.card {
+.cardCover {
   position: relative;
+  width: 370px;
+  height: 210px;
+}
+.cardCover .card {
+  position: absolute;
   width: 350px;
   height: 200px;
   border-radius: 20px;
-  border-color: #01080D;
-  background-color: #01080D;
-  color: #ad2e2e;
+  top: 5px;
+  left: 10px;
+  background-color: #0D0D0D;
+  color: white;
 }
-.card h1 {
+.cardCover .card p {
   padding: 10px 10px;
   position: absolute;
   bottom: 0px;
+  font-size: 2em;
 }
-.searchBar {
-  padding: 10px 0px 0px 10px;
-  position: relative;
-  left: calc(50% - 255px);
+.cardCover .card:hover {
+  cursor: pointer;
+  animation-name: anime;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  font-size: 0.6em;
+}
+.cardCover .card:hover p {
+  text-align: justify;
+  padding: 15px 15px;
+}
+@keyframes anime {
+  to {
+    width: 370px;
+    height: 210px;
+    top: 0px;
+    left: 0px;
+    background-color: #8C2020;
+  }
+}
+.navBar {
+  background-color: #0D0D0D;
+  height: 52px;
+}
+.navBar img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+}
+.navBar p {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #8C2020;
+}
+.navBar .searchBar {
+  padding: 5px 0px 5px 0px;
+  position: absolute;
+  right: 5px;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
 }
-.searchBar input[type="text"] {
+.navBar .searchBar input[type="text"] {
   padding: 10px 2px 10px 2 px;
   font-size: 1.5em;
   width: 400px;
   height: 36px;
-  color: #ad2e2e;
+  color: #8C2020;
+  border-radius: 10px;
 }
-.searchBar Button {
+.navBar .searchBar Button {
   width: 100px;
-  height: 25px;
+  height: 40px;
+  font-size: 1.2em;
+}
+.navBar .searchBar Button:hover {
+  background-color: #8C2020;
+  color: white;
+}
+* {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 .App .displayArea {
   padding: 10px 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+.addData {
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  padding: 5% 10%;
+  align-items: center;
+  background: linear-gradient(to top right, #404040, #8C2020);
+}
+.addData h1 {
+  color: white;
+}
+.addData #addDataName,
+.addData #addDataImgSrc {
+  font-size: 1.3em;
+  width: 100%;
+  height: 40px;
+}
+.addData #addDataInfo {
+  font-size: 1.3em;
+  width: 100%;
+  height: 90px;
+}
+.addData button {
+  width: 25%;
+  height: 40px;
 }
